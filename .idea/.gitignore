@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+env/
+__pycache__/
+inspectionProfiles/
+misc.xml
+modules.xml
+tp-django.iml
+vcs.xml
