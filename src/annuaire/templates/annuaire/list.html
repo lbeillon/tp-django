@@ -1,0 +1,22 @@
+
+        <header>
+            <h1>Annuaire de contacts</h1>
+        </header>
+        <div class="list">
+            <div>
+                <particulier>
+                    <ul>
+                        {% for contact in contacts %}
+                        <li>
+                            <h2>
+                                <a href ="{% url 'contact' nom=contact.nom prenom=contact.prenom%}">
+                                    {{contact.nom}} {{contact.prenom}}
+                                </a>
+                            </h2> 
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                </particulier>
+            </div>
+        </div>

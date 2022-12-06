@@ -1,6 +1,7 @@
-from django.urls import path
-from .views import liste_contacts, hello
+from django.urls import path, re_path
+from .views import *
 
 urlpatterns = [
-   # path('annuaire/', hello, name='annuaire')
+   path('annuaire/', liste_contacts, name='annuaire'),
+   path('annuaire/<nom>/<prenom>/', fiche_contact, name="contact")
 ]

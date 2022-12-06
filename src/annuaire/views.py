@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse
 
 
 # Create your views here.
@@ -32,10 +32,8 @@ contacts = [
 ]
 
 def liste_contacts(request):
-    return render(request, 'list.html', context={'contacts': contacts})
+    return render(request, 'annuaire/list.html', context={'contacts': contacts})
 
-def hello(request):
-    return HttpResponse(request, "Bienvenue sur l'annuaire")
+def fiche_contact(request, nom, prenom):
+    return render(request, 'annuaire/contact.html', context={'contacts':contacts, 'nom':nom, 'prenom':prenom})
 
-def redirect_index(request):
-    return redirect("annuaire")
