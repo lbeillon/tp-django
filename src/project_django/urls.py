@@ -21,5 +21,5 @@ from annuaire.views import redirect_index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('accueil.urls')),
-    path('', redirect_index),
+    #path('', redirect_index),
 ]
