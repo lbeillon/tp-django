@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
    path('annuaire/', liste_contacts, name='annuaire'),
-   path('annuaire/<nom>/<prenom>/', fiche_contact, name="contact")
+   path('annuaire/<nom>/', fiche_contact, name="contact"),
 ]

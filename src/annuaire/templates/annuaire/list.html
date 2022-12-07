@@ -9,7 +9,7 @@
                         {% for contact in contacts %}
                         <li>
                             <h2>
-                                <a href ="{% url 'contact' nom=contact.nom prenom=contact.prenom%}">
+                                <a href ="{% url 'contact' nom=contact.nom %}">
                                     {{contact.nom}} {{contact.prenom}}
                                 </a>
                             </h2> 

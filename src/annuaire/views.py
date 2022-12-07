@@ -34,6 +34,11 @@ contacts = [
 def liste_contacts(request):
     return render(request, 'annuaire/list.html', context={'contacts': contacts})
 
-def fiche_contact(request, nom, prenom):
-    return render(request, 'annuaire/contact.html', context={'contacts':contacts, 'nom':nom, 'prenom':prenom})
+def fiche_contact(request, nom):
+    for contact in contacts :
+        if contact['nom']==nom:
+            name  = contact['nom']
+            first_name = contact['prenom']
+            num = contact['telephone']
+            return render(request, 'annuaire/contact.html', context={'name': name, 'firstname': first_name, 'num': num})
 
