@@ -55,7 +55,7 @@ def liste_entreprises(request):
     contacts = Contact.objects.all()
     entreprises = []
     for contact in contacts :
-        if contact.entreprise is False : 
+        if contact.entreprise is True : 
             entreprises.append(contact)
     return render(request, 'annuaire/pages_jaunes.html', context={"entreprises": entreprises})
 
@@ -87,6 +87,17 @@ def fiche_particulier(request, nom):
     contacts = Contact.objects.all()
     for contact in contacts :
         if contact.nom ==nom and contact.entreprise==False:
+            name  = contact.nom
+            first_name = contact.prenom
+            num = contact.telephone
+            return render(request, 'annuaire/contact.html', context={'name': name, 'firstname': first_name, 'num': num})
+
+
+# fiche entreprises
+def fiche_entreprise(request, nom):
+    contacts = Contact.objects.all()
+    for contact in contacts :
+        if contact.nom == nom and contact.entreprise==True:
             name  = contact.nom
             first_name = contact.prenom
             num = contact.telephone

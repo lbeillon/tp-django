@@ -4,13 +4,15 @@
 
 <div class="annuaire">
 <h1>Fiche contact</h1>
-<detailparticulier>
+<div class="detailparticulier">
     <h1>{{name}} {% if firstname %} {{firstname}} {% endif %}</h1>
     <p> Numéro de téléphone : {{num }}</p>
-</detailparticulier>
+</div>
+<div class="nav">
 <a href ="{% url 'annuaire' %}">
     Retourner sur l'annuaire
 </a>
+</div>
 </div>
 {% endblock %}
 
