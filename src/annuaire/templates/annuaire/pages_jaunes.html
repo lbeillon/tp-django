@@ -3,15 +3,15 @@
 {% block content %}
 
 <div class="list">
-<h1>Annuaire de contacts</h1>    
+<h1>Pages Jaunes</h1>    
     <div>
         <particulier>
             <ul>
-                {% for contact in contacts %}
+                {% for entreprise in entreprises %}
                 <li>
                     <h2>
-                        <a href ="{% url 'contact' nom=contact.nom %}">
-                            {{contact.nom}} {% if contact.prenom %}{{contact.prenom}} {% endif %}
+                        <a href ="{% url 'contact-entreprises' nom=entreprise.nom %}">
+                            {{entreprise.nom}} {% if entreprise.prenom %}{{entreprise.prenom}} {% endif %}
                         </a>
                     </h2> 
                 </li>

@@ -1,11 +1,19 @@
+{% extends 'layouts/base.html' %}
 
-        <detailparticulier>
-            <h1>{{name}} {{firstname}}</h1>
-            <p> Numéro de téléphone : {{num }}</p>
-        </detailparticulier>
-        <a href ="{% url 'annuaire' %}">
-            Retourner sur l'annuaire
-        </a>
+{% block content %}
+
+<div class="annuaire">
+<h1>Fiche contact</h1>
+<detailparticulier>
+    <h1>{{name}} {% if firstname %} {{firstname}} {% endif %}</h1>
+    <p> Numéro de téléphone : {{num }}</p>
+</detailparticulier>
+<a href ="{% url 'annuaire' %}">
+    Retourner sur l'annuaire
+</a>
+</div>
+{% endblock %}
+
 
 
 

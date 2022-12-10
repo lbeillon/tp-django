@@ -1,10 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang = "fr">
     <head>
         <meta charset= "UTF-8">
-        <title></title>
+        <title>Application</title>
+        <!-- <link rel="stylesheet" href="{% static 'css/styleHeader.css' %}" type="text/css" /> -->
     </head>
     <body>
-    <h1></h1>
+        <div>
+            <p>Menu :</p>
+            <ul>
+               <li><a class="nav" href="{% url 'accueil' %}">Accueil</a></li> 
+               <li><a class="nav" href="{% url 'annuaire' %}">Annuaire</a></li>
+               <li><a class="nav" href="{% url 'particuliers' %}">Pages Blanches</a></li>
+               <li><a class="nav" href="{% url 'entreprises' %}">Pages Jaunes</a></li> 
+            </ul>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
     </body>
 </html>

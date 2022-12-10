@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accueil',
     'annuaire',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'project_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'project_django/templates'),os.path.join(BASE_DIR, 'accueil/templates'), os.path.join(BASE_DIR, 'annuaire/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

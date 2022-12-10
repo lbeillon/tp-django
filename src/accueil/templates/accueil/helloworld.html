@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang = "fr">
-    <head>
-        <meta charset= "UTF-8">
-        <title>Accueil</title>
-    </head>
-    <body>
-        <div class="container">
-            <h1>Hello World !</h1>
-            <h2>Aujourd'hui nous sommes le {{date|date:"d F Y"}}</h2>
-        </div>
-        <div>
-            <p clas="annuaire">
-                <a href="{% url 'annuaire' %}">Annuaire</a>
-            </p>
-        </div>
-        <!--<div>
-            {% block content %}
-            {% endblock %} -->
-        </div>
-    </body>
-</html>
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div>
+    <h1>Accueil</h1>
+    <h2>Bonjour !</h2>
+    <p>Aujourd'hui nous sommes le {{date|date:"d F Y"}}</p>
+</div>
+<!-- <p class="annuaire">
+        <a href="{% url 'annuaire' %}">Annuaire</a>
+</p> -->
+
+
+{% endblock %}
+
+
 
 
