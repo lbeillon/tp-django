@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<div class="list">
+<h1>Annuaire de contacts</h1>    
+    <div> 
+        <div class="particulier">
+            <ul>
+                {% for contact in contacts %}
+                <li>
+                    <h2>
+                        <a href ="{% url 'contact' nom=contact.nom %}">
+                            {{contact.nom}} {% if contact.prenom %}{{contact.prenom}} {% endif %}
+                        </a>
+                    </h2> 
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

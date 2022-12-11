@@ -1,0 +1,146 @@
+
+
+ body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    background-color: rgba(221, 221, 221, 0.44);
+    color:  rgb(255, 255, 255);
+    text-align: center;
+  }
+
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+ul li{
+    padding: 0 10px;
+    list-style-type: none;
+}
+
+.nav *{
+    text-decoration: none;
+}
+
+body, html{
+    min-height: 100vh;
+}
+
+
+p{
+    color:black;
+}
+
+
+a{
+    color: rgb(25, 4, 4);
+    text-decoration: none;
+    margin: auto;
+    width: 40%;
+}
+ 
+div{
+    border-color: rgba(0, 255, 76, 0.548);
+    font-size: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    /*border-bottom: 0.5mm solid;*/
+    border-color: rgb(143, 7, 7);
+    text-align: center;
+}
+
+div.particulier{
+    align-items: left;
+    justify-content: left;
+    
+}
+
+/*
+
+entreprise{
+    margin: 10%;
+} */
+
+div.list{
+    background: rgba(204, 181, 4, 0.544);
+    color :rgb(255, 255, 255);
+    display : inline-block;
+    width: 98%;
+    border: solid;
+    border-color: rgb(93, 2, 2);
+    /*margin-left:-3%;
+    /*margin-right:-3%;*/
+}
+
+div.list p{
+    color:rgb(255, 255, 255)
+}
+
+
+h1{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    justify-content: center;
+}
+
+div.annuaire {
+    background: rgba(204, 181, 4, 0.544);
+    color :rgb(255, 255, 255);
+    width: 98%;
+    border: solid;
+    border-color: rgb(93, 2, 2);
+}
+
+div.annuaire h1{
+    align-items: left;
+    width: 100%;
+    color :rgb(255, 255, 255);
+   /* margin-left: -1%;*/
+    
+}
+div.annuaire h2{
+    align-items: left;
+    width: 100%;
+    color :rgb(255, 255, 255);
+   /* margin-left: -1%;*/
+    
+}
+
+div.annuaire p{
+    display: inline-block;
+    margin-left: 10%;
+    width: 35%;
+}
+
+div.detailparticulier {
+    display: flex;
+    width: 100%;
+    /* background-color: rgba(204, 181, 4, 0.544); */
+    /*margin-left: -1%; */
+}
+div.detailparticulier h1{
+    color : rgb(93, 2, 2);
+    align-items: left;
+    justify-content: left;
+}
+
+div.detailparticulier p{
+    color : rgb(93, 2, 2);
+    align-items: left;
+    justify-content: left;
+}
+
+a.nav p{
+    background-color: black;
+    color: gray;
+    width: 100%;
+    border-radius: 10px;
+    border-color: black;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: absolute;
+}
